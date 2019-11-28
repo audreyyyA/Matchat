@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Satisfy&display=swap');
+body
+{
+	background: url("fond.png") no-repeat center fixed;
+	background-size:100% 100%;
+    margin:0;
+    -webkit-background-size: cover; /* pour les anciens Chrome et Safari */
+    background-size: cover;
+	background-color:black;
+	font-family:'Satisfy', cursive;
+	
+}
+
+
+.fond
+{
+	position: relative;
+	display: block;
+	float: center ;
+	background-color:black;
+    width: 70%;
+    height: 90vh;
+    /*border: 3px solid black;*/
+    padding-top: 5%;
+    margin: 0 auto;
+    top: 60px;
+    z-index: 0;
+}
+#band
+{
+	display: block;
+	position:fixed;
+	top: 0;
+	right: 0;
+	width: 50%;
+	background-color:#6D071A;
+}
+
+#band2
+{
+	display: block;
+	position:fixed;
+	top: 0;
+	left: 0;
+	width: 50%;
+	background-color:#808080;
+}
+
+#nomSite2
+{
+	color:white;
+	text-align:right;
+}
+
+#nomSite
+{
+	color:white;
+	
+}
+
+p{
+
+		color:white;
+		text-align:center;
+}
+
+#Connexion{
+	
+	background-color:#808080;
+	margin-right:20%;
+	margin-left:20%;
+	margin-top:10%;
+}
+
+#connexion{
+	margin-right:0;
+	
+}
+
+#ptitband{
+
+	display: block;
+	position:fixed;
+	top: 0;
+	padding-top:0;
+	left: 0;	
+}	
+
+#Baizodrome{
+	display: block;
+	position:fixed;
+	padding-top:0;
+	color:white;
+}
+
+#Dark{
+		
+	height:50%;
+	background-color:#6D071A;
+}
+
+#soft{
+
+	height:50%;
+	background-color:#808080;
+}
+
+
+
