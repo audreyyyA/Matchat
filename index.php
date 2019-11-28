@@ -1,4 +1,5 @@
 <?php
+//changement
 session_start();
 
 $flash = isset($_SESSION['flash']) ? $_SESSION['flash'] : [];
