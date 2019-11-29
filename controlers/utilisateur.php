@@ -178,25 +178,99 @@ function newTest(){
 	$humoristique3 =isset($_POST['humoristique3'])?($_POST['humoristique3']):'';
 	$humoristique= $humoristique1+$humoristique2+$humoristique3;
 	
-	/*foreach([ //remplir avec les valeurs du dessus
-	'F' => 'Femme',
-	'M' => 'Homme',				
-	'NonBinaire' => 'Non Binaire',
-	'Trans' => 'Transexuel',
-	'Hermaphrodite' => 'Hermaphrodite',
-	'Autre' => 'Autre',
-	] as $key => $value){
+	if(count(_POST) < 1){
+		deleteUser($pseudo);
+		redirect("utilisateur", "register_form");
+		//+message d'erreur et supp utilisateur
+	}
 
-		if($key === null){
-			$res = deleteUser();
-			if($res === '0')
 
-			flash('err', 'inscription échouée');
-			redirect("utilisateur", "register_form");
-			return;
-		}
+	//condition d'insertion:
+	if ($social>=8){
+		$id_criterion=1;
+		insertLink($iduser,$idcriterion);
+	}
+	elseif ($social<8){
+		$id_criterion=2;
+		insertLink($iduser,$idcriterion);
+	}
+	elseif ($agreable>=8){
+		$id_criterion=3;
+		insertLink($iduser,$idcriterion);
+	}
+	elseif ($agreable<8){
+		$id_criterion=4;
+		insertLink($iduser,$idcriterion);
+	}
+	elseif ($froid>=8){
+		$id_criterion=5;
+		insertLink($iduser,$idcriterion);
+	}
+	elseif ($froid<8){
+		$id_criterion=6;
+		insertLink($iduser,$idcriterion);
+	}
+	elseif ($orgueilleux>=8){
+		$id_criterion=7;
+		insertLink($iduser,$idcriterion);
+	}
+	elseif ($orgueilleux<8){
+		$id_criterion=8;
+		insertLink($iduser,$idcriterion);
+	}
+	elseif ($suiveur>=8){
+		$id_criterion=9;
+		insertLink($iduser,$idcriterion);
+	}
+	elseif ($suiveur<8){
+		$id_criterion=10;
+		insertLink($iduser,$idcriterion);
+	}
+	elseif ($superficiel>=8){
+		$id_criterion=11;
+		insertLink($iduser,$idcriterion);
+	}
+	elseif ($superficiel<8){
+		$id_criterion=12;
+		insertLink($iduser,$idcriterion);
+	}
+	elseif ($anxieux>=8){
+		$id_criterion=13;
+		insertLink($iduser,$idcriterion);
+	}
+	elseif ($anxieux<8){
+		$id_criterion=14;
+		insertLink($iduser,$idcriterion);
+	}
+	elseif ($empathique>=8){
+		$id_criterion=15;
+		insertLink($iduser,$idcriterion);
+	}
+	elseif ($empathique<8){
+		$id_criterion=16;
+		insertLink($iduser,$idcriterion);
+	}
+	elseif ($optimiste>=8){
+		$id_criterion=17;
+		insertLink($iduser,$idcriterion);
+	}
+	elseif ($optimiste<8){
+		$id_criterion=18;
+		insertLink($iduser,$idcriterion);
+	}
+	elseif ($humoristique>=8){
+		$id_criterion=19;
+		insertLink($iduser,$idcriterion);
+	}
+	elseif ($humoristique<8){
+		$id_criterion=20;
+		insertLink($iduser,$idcriterion);
+	}
 
-	}*/
+	$_SESSION['pseudo'] = $pseudo;
+	redirect("utilisateur", "profile");
+	return;
+
 }
 
 function profile() {
